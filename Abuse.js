@@ -366,4 +366,4 @@ bot.on('message', message => {
 
                         
 
-bot.login("MzY4NDg2NTU4MzQ2NzcyNDgw.DML-Ag.kz18WnvO_Gt0v7Yg-lc7DDXf5Xo");
+bot.login("");
