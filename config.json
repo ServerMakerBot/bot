@@ -1,1 +1,1 @@
-{"prefix1":"-","prefix2":"<@368486558346772480>","automessage":"🐶","autochannelid":"336694250588602369","token":"MzY4NDg2NTU4MzQ2NzcyNDgw.DML-Ag.kz18WnvO_Gt0v7Yg-lc7DDXf5Xo"}
+{"prefix1":"-","prefix2":"<@368486558346772480>","automessage":"🐶","autochannelid":"336694250588602369","token":process.env.BOT_TOKEN}
