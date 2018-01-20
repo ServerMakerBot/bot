@@ -3,16 +3,12 @@ const bot = new Discord.Client();
 
 
 
-var cleverbot = require("cleverbot.io");
-var talkbot = new cleverbot('1ZQOuHL2HlBRhvE9','6SgqVPxAwKCam7dYvdssCeXYP5G4YoV0');
+
 
 
 bot.on('message', message => {
-    if(message.channel.name !== "abusecleverbot") return  
-    if(message.author.bot) return;
-    talkbot.ask(message.content, function (err, response) {
-    message.channel.send(response); // Will likely be: "Living in a lonely world"
-  });
+if(message.content === '-Abuse') return
+message.channel.send('YOU DID IT YOU GOT THIS BOT ON HEROKU')
 
 });
 
