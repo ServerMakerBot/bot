@@ -1,0 +1,61 @@
+{
+
+  "name": "abuse",
+
+  "version": "1.0.0",
+
+  "description": "An in-depth guide on deploying your Discord.js bot on Heroku",
+
+  "main": "Testing.js",
+
+  "engines": {
+
+    "node": "8.x",
+
+    "npm": "*"
+
+  },
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "start": "node index.js"
+
+  },
+
+  "repository": {
+
+    "type": "git",
+
+    "url": "git+https://github.com/BradGamez/Abuse-Bot/.git"
+
+  },
+
+  "keywords": [
+
+    "heroku",
+
+    "discord.js"
+
+  ],
+
+  "author": "synicalsyntax",
+
+  "license": "MIT",
+
+  "bugs": {
+
+    "url": "https://github.com/BradGamez/Abuse-Bot/issues"
+
+  },
+
+  "homepage": "https://github.com/BradGamez/Abuse-Bot#readme",
+
+  "dependencies": {
+
+    "discord.js": "^11.3.0"
+
+  }
+
+}
