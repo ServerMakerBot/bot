@@ -2,10 +2,6 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 var cat = 0
 const config = require("./config.json");
-const fs = require("fs")
-const yt = require('ytdl-core');
-const opus = require('node-opus');
-const search = require('youtube-search');
 var prefix = config.prefix1
 
 bot.on('message', message => { 
