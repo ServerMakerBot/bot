@@ -7,9 +7,9 @@ const bot = new Discord.Client();
 
 
 bot.on('message', message => {
-if(message.content === '-Abuse') return
+if(message.content === '-Abuse') {
 message.channel.send('YOU DID IT YOU GOT THIS BOT ON HEROKU')
-
+}
 });
 
 
