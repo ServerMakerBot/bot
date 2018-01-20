@@ -53,19 +53,6 @@
 
   "homepage": "https://github.com/BradGamez/Abuse-Bot#readme",
 
-  "optionalDependencies": {
-
-    "@ffmpeg-installer/darwin-x64": "4.0.4",
-
-    "@ffmpeg-installer/linux-ia32": "4.0.3",
-
-    "@ffmpeg-installer/linux-x64": "4.0.3",
-
-    "@ffmpeg-installer/win32-ia32": "4.0.3",
-
-    "@ffmpeg-installer/win32-x64": "4.0.2"
-
-  },
   
   "dependencies": {
 
