@@ -65,13 +65,7 @@
 
     "cleverbot.io": "^1.0.4",
     
-    "ffmpeg binaries"
-  },
-"bin": {
-
-    "ffmpeg": "bin/ffmpeg",
-
-    "ffprobe": "bin/ffprobe"
-
+    
   }
+
 }
