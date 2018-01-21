@@ -460,7 +460,7 @@ bot.on('message', message => {
                         let count = 0;
                         function oof(){
                         if(count > gamez.length - 1) count = 0;
-                        bot.user.setGame(gamez[count++], "https://www.youtube.com/watch?v=Qe1F8fNxEyg");
+                        bot.user.setGame(gamez[count++], "https://www.twitch.tv/xisuma");
                         }
                         setInterval(oof, 300000);
                         });
