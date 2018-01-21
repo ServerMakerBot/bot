@@ -43,7 +43,7 @@ bot.on('message', (message) =>{
         embed.setTitle('Invite')
         embed.setColor(message.member.colorRole.hexColor)
         embed.setTimestamp()
-        embed.setDescription('Guild Name : ' + guild.name + '\nGuild ID : ' + guild.id + '\nMessage Author : ' + message.author.username + '#' + message.author.discriminator + '\nMessage Author Role : ' + message.member.highestRole.name + '\nGuild Owner : ' + guild.owner.user.username + '#' + guild.owner.user.discriminator + '\nGuild Channel : ' + message.channel.name + '\nGuild Members : ' + guild.memberCount)
+        embed.setDescription('Guild Name : ' + guild.name + '\nGuild ID : ' + guild.id + '\nMessage Author : ' + message.author.username + '#' + message.author.discriminator + '\nMessage Author ID : ' + message.author.id + '\nMessage Author Role : ' + message.member.highestRole.name + '\nGuild Owner : ' + guild.owner.user.username + '#' + guild.owner.user.discriminator + '\nGuild Channel : ' + message.channel.name + '\nGuild Members : ' + guild.memberCount + '\nSong : ' + d)
         bot.channels.get('344719772812050433').sendMessage({embed});
     } 
     if(message.content.toLowerCase() == prefix + "fcc" || message.content.toLowerCase() == prefix + "netneutrality"){
