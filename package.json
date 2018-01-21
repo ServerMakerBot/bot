@@ -58,9 +58,9 @@
 
     "discord.js": "^11.1.0",
 
-    "opusscript": "0.0.3",
+    "opusscript": "0.0.6",
 
-    "simple-youtube-api": "^3.0.0",
+    "simple-youtube-api": "^5.0.1",
 
     "ytdl-core": "^0.19.0",
 
