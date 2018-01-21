@@ -460,7 +460,7 @@ bot.on('message', message => {
                         let count = 0;
                         function oof(){
                         if(count > gamez.length - 1) count = 0;
-                        bot.user.setGame(gamez[count++]);
+                        bot.user.setGame(gamez[count++], "https://bradgamezcorporation.weebly.com/");
                         }
                         setInterval(oof, 300000);
                         });
