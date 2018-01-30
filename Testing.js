@@ -49,7 +49,6 @@ bot.on('message', (message) =>{
     if(message.content.toLowerCase() == prefix + "fcc" || message.content.toLowerCase() == prefix + "netneutrality"){
         message.channel.send('Please Help Save Our Internet Let\'s Stop The FCC. \n<https://battleforthenet.com/>')
     }        
-
 })
 
 bot.on('message', message => {
@@ -77,9 +76,10 @@ bot.on('message', message => {
         if (message.author.bot) return;
         embed.setColor('RED');
         embed.setDescription("You do not have permission to use this command");
-        embed.setFooter("Must be `Bot Owner`")
+	embed.setFooter("Must be Bot Owner")
       message.channel.send({embed}); 
-    }
+    }        
+
 }
 
 });
