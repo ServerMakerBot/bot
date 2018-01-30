@@ -69,7 +69,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed();
         if (message.author.bot) return;
         embed.setColor('BLUE');
-        embed.setDescription("Playing status set to__" + g + "__");
+        embed.setDescription("Playing status set to**" + g + "**");
       message.channel.send({embed});
     } else {
         var embed = new Discord.RichEmbed();
