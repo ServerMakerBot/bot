@@ -69,13 +69,13 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed();
         if (message.author.bot) return;
         embed.setColor('BLUE');
-        embed.setDescription("Playing status set to " + g);
+        embed.setDescription("Playing status set to__" + g + "__");
       message.channel.send({embed});
     } else {
         var embed = new Discord.RichEmbed();
         if (message.author.bot) return;
         embed.setColor('RED');
-        embed.setDescription("You do not have permission to use this command");
+        embed.setDescription("You do not have permission to use this command.");
 	embed.setFooter("Must be Bot Owner")
       message.channel.send({embed}); 
     }        
