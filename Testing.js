@@ -60,6 +60,31 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
+    var guild = message.guild;
+    var author = message.author;
+    var args = message.content.split(' '); var g = " "; for(var i = 1; i < args.length; i++){ g = g+" "+args[i]; }
+    if (message.content.startsWith(prefix + 'setplayingstatus')) {
+        if (message.author.id === "335893092756488205") {
+            
+        bot.user.setGame(g)
+        var embed = new Discord.RichEmbed();
+        if (message.author.bot) return;
+        embed.setColor('BLUE');
+        embed.setDescription("Playing status set to " + g);
+      message.channel.send({embed});
+    } else {
+        var embed = new Discord.RichEmbed();
+        if (message.author.bot) return;
+        embed.setColor('RED');
+        embed.setDescription("You do not have permission to use this command");
+        embed.setFooter("Must be `Bot Owner`")
+      message.channel.send({embed}); 
+    }
+}
+
+});
+
+bot.on('message', message => {
     let guild = message.guild
     var user = message.mentions.users.first();
     var embed = new Discord.RichEmbed();
@@ -182,6 +207,7 @@ bot.on('message', message => {
                         embed.setDescription('List Of Things You Will Need For Abuse');
                       embed.addBlankField();
                       embed.addField('#welcome', 'Auto Welcomes');
+		      embed.addField('#abusecleverbot', 'Talk to my bot');
                       embed.addField('#mod-logs', 'Auto Logs')                
                       message.channel.send({embed});
                         }
@@ -239,7 +265,7 @@ bot.on('message', message => {
                                                 var embed = new Discord.RichEmbed();
                                                 embed.setTitle('Commands');
                                                 embed.setColor('BLUE');
-                                                embed.setDescription('\n**' + prefix + 'play :** music command (not working yet)\n**' + prefix + 'prefix1 :** prefix setting 1\n**' + prefix + 'prefix2 :** prefix setting 2\n**' + prefix + 'automessage :** auto message setting\n**' + prefix + 'autochannelid :** auto channel id setting 2\n**' + prefix + 'shutdown :** shuts down bot\n**' + prefix + 'botinfo :** shows servers and users\n**' + prefix + 'chat :** repeats your message\n**' + prefix + 'logsinfo :** sents server info to mod logs of Abuse server');
+                                                embed.setDescription('\n**' + prefix + 'play :** music command (not working yet)\n**' + prefix + 'prefix1 :** prefix setting 1\n**' + prefix + 'prefix2 :** prefix setting 2\n**' + prefix + 'automessage :** auto message setting\n**' + prefix + 'autochannelid :** auto channel id setting 2\n**' + prefix + 'shutdown :** shuts down bot\n**' + prefix + 'botinfo :** shows servers and users\n**' + prefix + 'chat :** repeats your message\n**' + prefix + 'logsinfo :** sents server info to mod logs of Abuse server\n**' + prefix + 'setplayingstatus :** sets plaing status of the bot');
                                                 message.channel.send({embed});
    
                                                     }}
