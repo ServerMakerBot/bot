@@ -176,12 +176,12 @@ bot.on('message', message => {
                     message.react('🔫')
                     if(Math.floor(Math.random() * (6 - 1 + 1) + 1) >=4) {
                     embed.setColor("GREEN")
-                    embed.setDescription(message.author + 'You Lived This Time... :rose:')
+                    embed.setDescription(message.author + ' You Lived This Time... :rose:')
                     embed.setTimestamp(); 
                     message.channel.send({embed});
                 } else {
                     embed.setColor('RED')
-                    embed.setDescription(message.author + 'You died... :fire:')
+                    embed.setDescription(message.author + ' You died... :fire:')
                     embed.setTimestamp();                  
                     message.channel.send({embed});
                     
