@@ -45,10 +45,7 @@ bot.on('message', (message) =>{
         embed.setTimestamp()
         embed.setDescription('Guild Name : ' + guild.name + '\nGuild ID : ' + guild.id + '\nMessage Author : ' + message.author.username + '#' + message.author.discriminator + '\nMessage Author ID : ' + message.author.id + '\nMessage Author Role : ' + message.member.highestRole.name + '\nGuild Owner : ' + guild.owner.user.username + '#' + guild.owner.user.discriminator + '\nGuild Channel : ' + message.channel.name + '\nGuild Members : ' + guild.memberCount)
         bot.channels.get('344719772812050433').sendMessage({embed});
-    } 
-    if(message.content.toLowerCase() == prefix + "fcc" || message.content.toLowerCase() == prefix + "netneutrality"){
-        message.channel.send('Please Help Save Our Internet Let\'s Stop The FCC. \n<https://battleforthenet.com/>')
-    }        
+    }    
 })
 
 bot.on('message', message => {
