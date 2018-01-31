@@ -1212,7 +1212,7 @@ function play(guild, song) {
 
 	const dispatcher = serverQueue.connection.playStream(ytdl(song.url))
 
-		.on('end', reason => {
+		dispatcher.on('end', reason => {
 
 			if (reason === 'Stream is not generating quickly enough.') console.log('Song ended.');
 
@@ -1224,7 +1224,7 @@ function play(guild, song) {
 
 		})
 
-		.on('error', error => console.error(error));
+		dispatcher.on('error', error => console.error(error));
 
 	dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
 
