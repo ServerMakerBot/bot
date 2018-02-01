@@ -135,13 +135,15 @@ bot.on('message', message => {
                 }
             });
 
-            bot.on('message' , message => {
+             bot.on('message' , async message => {
                 var embed = new Discord.RichEmbed();                                                        
                 if (message.content.toLowerCase() === prefix + "ping") {
+   		const m = await message.channel.send("Ping?");
+    		var ping = Math.round(m.createdTimestamp - message.createdTimestamp)
                     embed.setColor('BLUE');
-                    embed.setDescription(Math.round(bot.ping) + 'ms')
-                    message.channel.send({embed});
-                }})                            
+                    embed.setDescription("Latency ping " + ping + "ms\nApi ping " + Math.round(bot.ping) + 'ms')
+                    m.edit({embed});
+                }});                             
 
 
             bot.on('message', message => {
