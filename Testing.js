@@ -4,14 +4,14 @@ const fs = require('fs')
 const config = require("./config.json");
 var prefix = config.prefix1
 
-bot.on('message', message => { 
+bot.on('message', async message => { 
     if ( message.content.toLowerCase() === prefix + 'shutdown') {
     if (message.author.bot) return; {
       if (message.author.id === "335893092756488205") {
         var embed = new Discord.RichEmbed();
         embed.setColor('RED');
         embed.setDescription('Shutting down...\nT - 30 seconds');
-        const m1 = message.channel.send({embed});
+        const m1 = await message.channel.send({embed});
 	      
 	setTimeout(goodbye, 10000)      
 	function goodbye() {
