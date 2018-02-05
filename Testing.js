@@ -34,14 +34,23 @@ bot.on('message', async message => {
   }
 });
 
-bot.on('message', message => { 
+bot.on('message', async message => { 
     if ( message.content.toLowerCase() === prefix + 'restart') {
     if (message.author.bot) return; {
       if (message.author.id === "335893092756488205") {
         var embed = new Discord.RichEmbed();
-        embed.setColor('RED');
+        embed.setColor('#FFFF00');
         embed.setDescription('Restarting...\nT - 30 seconds');
-        message.channel.send({embed});
+        const m1 = await message.channel.send({embed});
+	      
+	setTimeout(goodbye, 25000)      
+	function goodbye() {
+	var embed = new Discord.RichEmbed();
+        embed.setColor('GREEN');
+        embed.setDescription('You would have though you could get rid of me I will be back soon! :stuck_out_tongue_closed_eyes:');
+	m1.edit({embed})	
+	};
+	      
         setTimeout(shutdown, 30000);
         function shutdown() {
             process.exit(1);
