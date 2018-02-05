@@ -14,6 +14,27 @@ bot.on('message', message => {
         message.channel.send({embed});
         setTimeout(shutdown, 30000);
         function shutdown() {
+            process.exit(0);
+          };
+        
+      } else {
+        message.channel.send(message.author + ' Insufficient permissions.');
+
+      }
+    }
+  }
+});
+
+bot.on('message', message => { 
+    if ( message.content.toLowerCase() === prefix + 'restart') {
+    if (message.author.bot) return; {
+      if (message.author.id === "335893092756488205") {
+        var embed = new Discord.RichEmbed();
+        embed.setColor('RED');
+        embed.setDescription('Shutting down...\nT - 30 seconds');
+        message.channel.send({embed});
+        setTimeout(shutdown, 30000);
+        function shutdown() {
             process.exit(1);
           };
         
