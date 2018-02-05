@@ -11,7 +11,16 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed();
         embed.setColor('RED');
         embed.setDescription('Shutting down...\nT - 30 seconds');
-        message.channel.send({embed});
+        const m1 = message.channel.send({embed});
+	      
+	setTimeout(goodbye, 10000)      
+	function goodbye() {
+	var embed = new Discord.RichEmbed();
+        embed.setColor('RED');
+        embed.setDescription('Goodbye I am never coming back :cry:');
+	m1.edit({embed})	
+	};      
+	      
         setTimeout(shutdown, 30000);
         function shutdown() {
             process.exit(0);
@@ -31,7 +40,7 @@ bot.on('message', message => {
       if (message.author.id === "335893092756488205") {
         var embed = new Discord.RichEmbed();
         embed.setColor('RED');
-        embed.setDescription('Shutting down...\nT - 30 seconds');
+        embed.setDescription('Restarting...\nT - 30 seconds');
         message.channel.send({embed});
         setTimeout(shutdown, 30000);
         function shutdown() {
