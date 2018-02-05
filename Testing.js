@@ -103,7 +103,7 @@ bot.on('message', message => {
   
           embed.setColor('BLUE');
   
-          embed.setDescription("Playing status set to**" + g + "**");
+          embed.setDescription("Avatar set to**" + g + "**");
   
         message.channel.send({embed});
   
@@ -155,7 +155,7 @@ bot.on('message', message => {
     
             embed.setColor('BLUE');
     
-            embed.setDescription("Playing status set to**" + g + "**");
+            embed.setDescription("Username set to**" + g + "**");
     
           message.channel.send({embed});
     
