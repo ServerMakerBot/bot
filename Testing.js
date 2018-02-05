@@ -13,7 +13,7 @@ bot.on('message', async message => {
         embed.setDescription('Shutting down...\nT - 30 seconds');
         const m1 = await message.channel.send({embed});
 	      
-	setTimeout(goodbye, 10000)      
+	setTimeout(goodbye, 25000)      
 	function goodbye() {
 	var embed = new Discord.RichEmbed();
         embed.setColor('RED');
