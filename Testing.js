@@ -293,21 +293,7 @@ bot.on('message', message => {
 	  	  message.channel.send(g);
 		  message.channel.send(g);
 		  message.channel.send(g);
-                } else {
-  
-          var embed = new Discord.RichEmbed();
-  
-          if (message.author.bot) return;
-  
-          embed.setColor('RED');
-  
-          embed.setDescription("You do not have permission to use this command.");
-  
-    embed.setFooter("Must be Bot Owner")
-  
-        message.channel.send({embed}); 
-  
-      }
+                } 
             });
 
              bot.on('message' , async message => {
