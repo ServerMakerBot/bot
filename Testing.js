@@ -980,8 +980,7 @@ bot.on('message', message => {
                                         })
                                 
         
-                                        bot.on('message', message => {
-                                            var guild = message.guild;
+                                        bot.on('message', message => {                                            var guild = message.guild;
                                             var author = message.author;
                                             var args = message.content.split(' '); var d = " "; for(var i = 1; i < args.length; i++){ d = d+" "+args[i]; }
                                             if (message.content.startsWith(prefix + 'play')) { 
@@ -1003,9 +1002,9 @@ bot.on('message', message => {
                                             if(message.author.bot) return;
                                             talkbot.ask(message.content, function (err, response) {
                                             message.channel.send(response); 
-					    }
+					    
                                           });
-                                        
+					    }
                                         });
                                
 
