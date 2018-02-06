@@ -999,7 +999,7 @@ bot.on('message', message => {
                                         
                                         
                                         bot.on('message', message => {
-                                            if(message.channel.name !== "abusecleverbot" || message.channel.id === "410577975616995340") return  
+                                            if(message.channel.name !== "abusecleverbot" || message.channel.id !== "410577975616995340") return  
                                             if(message.author.bot) return;
                                             talkbot.ask(message.content, function (err, response) {
                                             message.channel.send(response); 
