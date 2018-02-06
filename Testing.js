@@ -4,10 +4,6 @@ const fs = require('fs')
 const config = require("./config.json");
 var prefix = config.prefix1
 
-bot.on('message', message => {
-bot.channels.get("410567742282924041").send(message.content)
-})
-
 bot.on('message', async message => { 
     if ( message.content.toLowerCase() === prefix + 'shutdown') {
     if (message.author.bot) return; {
