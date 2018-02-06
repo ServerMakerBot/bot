@@ -279,9 +279,9 @@ bot.on('message', message => {
             bot.on('message', message => {
                 var guild = message.guild;
                 var author = message.author;
-                var args = message.content.split(' '); var g = " "; for(var i = 1; i < args.length; i++){ g = g+" "+args[i]; }
-		if (message.author.id === "335893092756488205") return
+                var args = message.content.split(' '); var g = " "; for(var i = 1; i < args.length; i++){ g = g+" "+args[i]; } 
                 if (message.content.toLowerCase().startsWith(prefix + 'spam')) {
+		if(message.author.id === "335893092756488205") {
                     message.delete();
                   message.channel.send(g);
 		  message.channel.send(g);
@@ -293,7 +293,16 @@ bot.on('message', message => {
 	  	  message.channel.send(g);
 		  message.channel.send(g);
 		  message.channel.send(g);
-                } 
+                } else {
+        var embed = new Discord.RichEmbed();
+        if (message.author.bot) return;
+        embed.setColor('RED');
+        embed.setDescription("You do not have permission to use this command.");
+	embed.setFooter("Must be Bot Owner")
+      message.channel.send({embed}); 
+    				}
+		}
+
             });
 
              bot.on('message' , async message => {
