@@ -7,7 +7,7 @@ var prefix = config.prefix1
 bot.on('message', message) {
 	if(message.author.bot) return
 
-	if(message.content.toLowerCase() === 'support') {
+	if(message.content.toLowerCase() === prefix + 'support') {
 		message.channel.send('support@mcpeservermaker.com')
 	}
 	
