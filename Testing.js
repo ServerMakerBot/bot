@@ -5,11 +5,15 @@ const config = require("./config.json");
 var prefix = config.prefix1
 
 bot.on('message', message => {
+	var embed = new Discord.RichEmbed();
 	if(message.author.bot) return
 
 	if(message.content.toLowerCase() === prefix + 'support') {
 		message.channel.send('support@mcpeservermaker.com')
 	}
+	if(message.conetent.toLowerCase() === prefix + permissions fly) {
+		embed.setColor('RED')
+		embed.setDescription('Permission : essentials.fly\n**Usage**\n`/setuperm <user> essentials.fly`\n`/setgperm <group> essentials.fly`');
 	
 	
 });
