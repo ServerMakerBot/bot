@@ -11,7 +11,7 @@ bot.on('message', message => {
 	if(message.content.toLowerCase() === prefix + 'support') {
 		message.channel.send('support@mcpeservermaker.com')
 	}
-	if(message.conetent.toLowerCase() === prefix + 'permissions fly') {
+	if(message.conetent.toLowerCase() === prefix + 'permission fly') {
 		embed.setColor('RED');
 		embed.setDescription('Permission : essentials.fly\n**Usage**\n`/setuperm <user> essentials.fly`\n`/setgperm <group> essentials.fly`');
 		message.channel.send({embed})
