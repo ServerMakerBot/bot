@@ -4,8 +4,14 @@ const fs = require('fs')
 const config = require("./config.json");
 var prefix = config.prefix1
 
+bot.on('message' message) {
 
-                               
+	if(message.content.toLowerCase() === 'support') {
+		message.channel.send('support@mcpeservermaker.com')
+	}
+	
+	
+});
 
 bot.login(process.env.BOT_TOKEN)
 
