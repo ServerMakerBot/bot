@@ -14,7 +14,7 @@ bot.on('message', message => {
 	if(message.content.toLowerCase() === prefix + 'permission fly') {
 		embed.setColor('RED');
 		embed.setTitle('EssentialsPE')
-		embed.setDescription('Permission : essentials.fly\n\n**Usage**\n`/setuperm <user> essentials.fly`\n`/setgperm <group> essentials.fly`');
+		embed.setDescription('**Permission**\n`essentials.fly`\n\n**Usage**\n`/setuperm <user> essentials.fly`\n`/setgperm <group> essentials.fly`');
 		message.channel.send({embed})
 	}
 	
@@ -34,7 +34,7 @@ const { Client, Util } = require('discord.js');
 const { TOKEN, PREFIX, GOOGLE_API_KEY } = require('./config');
 
 const YouTube = require('simple-youtube-api');
-
+	
 const ytdl = require('ytdl-core');
 
 
