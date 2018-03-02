@@ -13,7 +13,8 @@ bot.on('message', message => {
 	}
 	if(message.content.toLowerCase() === prefix + 'permission fly') {
 		embed.setColor('RED');
-		embed.setDescription('Permission : essentials.fly\n**Usage**\n`/setuperm <user> essentials.fly`\n`/setgperm <group> essentials.fly`');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('Permission : essentials.fly\n\n**Usage**\n`/setuperm <user> essentials.fly`\n`/setgperm <group> essentials.fly`');
 		message.channel.send({embed})
 	}
 	
