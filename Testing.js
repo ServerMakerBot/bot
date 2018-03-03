@@ -17,6 +17,13 @@ bot.on('message', message => {
 		embed.setDescription('**Permission**\n`essentials.fly`\n\n**Usage**\n`/setuperm <user> essentials.fly`\n`/setgperm <group> essentials.fly`');
 		message.channel.send({embed})
 	}
+	if(message.content.toLowerCase() === prefix + 'permission god') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.god`\n\n**Usage**\n`/setuperm <user> essentials.god`\n`/setgperm <group> essentials.god`');
+		message.channel.send({embed})
+	}
+	
 	
 	
 });
