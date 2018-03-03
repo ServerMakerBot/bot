@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs')
@@ -10,6 +11,12 @@ bot.on('message', message => {
 
 	if(message.content.toLowerCase() === prefix + 'support') {
 		message.channel.send('support@mcpeservermaker.com')
+	}
+	if(message.content.toLowerCase() === prefix + 'permission balance') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.balance`\n\n**Usage**\n`/setuperm <user> essentials.balance`\n`/setgperm <group> essentials.balance`');
+		message.channel.send({embed})
 	}
 	if(message.content.toLowerCase() === prefix + 'permission fly') {
 		embed.setColor('RED');
