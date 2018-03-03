@@ -18,6 +18,24 @@ bot.on('message', message => {
 		embed.setDescription('**Permission**\n`essentials.balance`\n\n**Usage**\n`/setuperm <user> essentials.balance`\n`/setgperm <group> essentials.balance`');
 		message.channel.send({embed})
 	}
+	if(message.content.toLowerCase() === prefix + 'permission break') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.break`\n\n**Usage**\n`/setuperm <user> essentials.break`\n`/setgperm <group> essentials.break`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission burn') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.burn`\n\n**Usage**\n`/setuperm <user> essentials.burn`\n`/setgperm <group> essentials.burn`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission ci' || message.content.toLowerCase() === prefix + 'permission clearinventory') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.clearinventory`\n\n**Usage**\n`/setuperm <user> essentials.clearinventory`\n`/setgperm <group> essentials.clearinventory`');
+		message.channel.send({embed})
+	}
 	if(message.content.toLowerCase() === prefix + 'permission fly') {
 		embed.setColor('RED');
 		embed.setTitle('EssentialsPE')
