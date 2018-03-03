@@ -1,4 +1,3 @@
-
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs')
@@ -34,6 +33,102 @@ bot.on('message', message => {
 		embed.setColor('RED');
 		embed.setTitle('EssentialsPE')
 		embed.setDescription('**Permission**\n`essentials.clearinventory`\n\n**Usage**\n`/setuperm <user> essentials.clearinventory`\n`/setgperm <group> essentials.clearinventory`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission colorchat') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.colorchat`\n\n**Usage**\n`/setuperm <user> essentials.colorchat`\n`/setgperm <group> essentials.colorchat`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission afk') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.afk`\n\n**Usage**\n`/setuperm <user> essentials.afk`\n`/setgperm <group> essentials.afk`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission back') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.back`\n\n**Usage**\n`/setuperm <user> essentials.back`\n`/setgperm <group> essentials.back`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission pay') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.pay`\n\n**Usage**\n`/setuperm <user> essentials.pay`\n`/setgperm <group> essentials.pay`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission pt' || message.content.toLowerCase() === prefix + 'permission powertool') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.powertool`\n\n**Usage**\n`/setuperm <user> essentials.powertool`\n`/setgperm <group> essentials.powertool`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission pvp') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.pvp`\n\n**Usage**\n`/setuperm <user> essentials.pvp`\n`/setgperm <group> essentials.pvp`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission realname') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.realname`\n\n**Usage**\n`/setuperm <user> essentials.realname`\n`/setgperm <group> essentials.realname`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission fix' || message.content.toLowerCase() === prefix + 'permission repair') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.repair`\n\n**Usage**\n`/setuperm <user> essentials.repair`\n`/setgperm <group> essentials.repair`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission gamemode') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.gamemode`\n\n**Usage**\n`/setuperm <user> essentials.gamemode`\n`/setgperm <group> essentials.gamemode`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission kill') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.kill`\n\n**Usage**\n`/setuperm <user> essentials.kill`\n`/setgperm <group> essentials.kill`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission kit') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.kit`\n\n**Usage**\n`/setuperm <user> essentials.kit`\n`/setgperm <group> essentials.kit`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission more') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.more`\n\n**Usage**\n`/setuperm <user> essentials.more`\n`/setgperm <group> essentials.more`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission msg') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.msg`\n\n**Usage**\n`/setuperm <user> essentials.msg`\n`/setgperm <group> essentials.msg`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission mute') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.mute`\n\n**Usage**\n`/setuperm <user> essentials.mute`\n`/setgperm <group> essentials.mute`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission near') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.near`\n\n**Usage**\n`/setuperm <user> essentials.near`\n`/setgperm <group> essentials.near`');
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'permission nick') {
+		embed.setColor('RED');
+		embed.setTitle('EssentialsPE')
+		embed.setDescription('**Permission**\n`essentials.nick`\n\n**Usage**\n`/setuperm <user> essentials.nick`\n`/setgperm <group> essentials.nick`');
 		message.channel.send({embed})
 	}
 	if(message.content.toLowerCase() === prefix + 'permission fly') {
