@@ -32,7 +32,7 @@ bot.on('message', message => {
 		embed.setColor(`#ff0000`)
 		message.channel.send({embed})
 	}
-		if(message.content.toLowerCase() === prefix + 'support') {
+	if(message.content.toLowerCase() === prefix + 'support') {
 		message.channel.send('support@mcpeservermaker.com')
 	}
 	if(message.content.toLowerCase() === prefix + 'permission balance') {
@@ -167,8 +167,6 @@ bot.on('message', message => {
 		embed.setDescription('**Permission**\n`essentials.god`\n\n**Usage**\n`/setuperm <user> essentials.god`\n`/setgperm <group> essentials.god`');
 		message.channel.send({embed})
 	}
-	
-	
 	
 });
 
