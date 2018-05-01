@@ -8,7 +8,27 @@ bot.on('message', message => {
 	var embed = new Discord.RichEmbed();
 	if(message.author.bot) return
 
-	if(message.content.toLowerCase() === prefix + 'support') {
+	if(message.content.toLowerCase() === prefix + 'mydevice andriod') {
+		message.member.addRole(`297193194439966720`)
+		embed.setAuthor(`You added Andriod role to yourself.`, message.author.displayAvatarURL)
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'mydevice ios') {
+		message.member.addRole(`297193152421298176`)
+		embed.setAuthor(`You added iOS role to yourself.`, message.author.displayAvatarURL)
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'notmydevice andriod') {
+		message.member.removeRole(`297193194439966720`)
+		embed.setAuthor(`You removed Andriod role from yourself.`, message.author.displayAvatarURL)
+		message.channel.send({embed})
+	}
+	if(message.content.toLowerCase() === prefix + 'notmydevice ios') {
+		message.member.removeRole(`297193152421298176`)
+		embed.setAuthor(`You removed iOS role from yourself.`, message.author.displayAvatarURL)
+		message.channel.send({embed})
+	}
+		if(message.content.toLowerCase() === prefix + 'support') {
 		message.channel.send('support@mcpeservermaker.com')
 	}
 	if(message.content.toLowerCase() === prefix + 'permission balance') {
