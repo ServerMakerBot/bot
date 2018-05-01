@@ -8,9 +8,9 @@ bot.on('message', message => {
 	var embed = new Discord.RichEmbed();
 	if(message.author.bot) return
 
-	if(message.content.toLowerCase() === prefix + 'mydevice andriod') {
+	if(message.content.toLowerCase() === prefix + 'mydevice android') {
 		message.member.addRole(`297193194439966720`)
-		embed.setAuthor(`You added Andriod role to yourself.`, message.author.displayAvatarURL)
+		embed.setAuthor(`You added Android role to yourself.`, message.author.displayAvatarURL)
 		embed.setColor(`#00FF00`)
 		message.channel.send({embed})
 	}
@@ -20,9 +20,9 @@ bot.on('message', message => {
 		embed.setColor(`#00FF00`)
 		message.channel.send({embed})
 	}
-	if(message.content.toLowerCase() === prefix + 'notmydevice andriod') {
+	if(message.content.toLowerCase() === prefix + 'notmydevice android') {
 		message.member.removeRole(`297193194439966720`)
-		embed.setAuthor(`You removed Andriod role from yourself.`, message.author.displayAvatarURL)
+		embed.setAuthor(`You removed Android role from yourself.`, message.author.displayAvatarURL)
 		embed.setColor(`#ff0000`)
 		message.channel.send({embed})
 	}
