@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs');
+const ms = require(`ms`)
 const config = require("./config.json");
 var prefix = config.prefix1
 
@@ -168,6 +169,165 @@ bot.on('message', message => {
 		message.channel.send({embed})
 	}
 	
+});
+
+bot.on('message', async message => { 
+    let guild = message.guild
+    var embed = new Discord.RichEmbed();
+
+    
+        const args = message.content.split(" ").slice(1);
+      
+        if (message.content.startsWith(prefix + "eval")) {
+          if(message.author.id !== "335893092756488205" && message.author.id !== `201679157124399104`) return;
+          if(message.content.toLowerCase().includes('token')) {
+    embed.setAuthor(`Nice try Kiddo`) // Missing Semicolon.
+    embed.setColor(`#ff0000`) // Missing Semicolon.
+    message.channel.send({embed});
+    return;
+  }  try {
+            const code = args.join(" ");
+            let evaled = eval(code);
+      
+            if (typeof evaled !== "string")
+              evaled = require("util").inspect(evaled);
+            embed.setDescription(evaled, {code:"xl"});
+	    embed.setAuthor("Eval", message.author.displayAvatarURL)
+	    embed.setColor("#1196F4")
+            message.channel.send({embed});
+          } catch (err) {
+	   embed.setAuthor("Error", message.author.displayAvatarURL)
+           embed.setDescription(`\`ERROR\` \`\`\`xl\n${err}\n\`\`\``);
+	   embed.setColor("#FF0000")
+           message.channel.send({embed});
+
+          }
+        }
+    if(message.author.bot) return;
+    if(!message.content.toLowerCase() === prefix + `bug report`) {
+    if(message.content.toLowerCase().includes('bug') || message.content.toLowerCase().includes('problem')|| message.content.toLowerCase().includes('issue')) {
+    if(message.channel.id === `286013484670517259`) {
+    embed.setAuthor(`Playmc Automatic Bug Report`,message.guild.iconURL)
+    embed.setDescription(`**Google Forms Bug Report :**\n[Click this blue text.](https://goo.gl/forms/fAgKFt507istLwq82)\n\n**Emailing Support :** \nMake sure to give a well written explaination of your issue/bug.\n**Email :** __support@mcpeservermaker.com__`)
+    embed.setColor(`#85C1E9`)
+    message.channel.send({embed}).then(msg => msg.delete(150000))
+    } else {
+    message.reply(`if you are looking for support move to <#286013484670517259>`).then(m => m.delete(10000))
+    }}}
+  
+  
+let Bugname;
+let des;
+let file;
+let emoji = message.guild.emojis.find(`name`,`servermaker`)
+  
+if(message.content.toLowerCase() === prefix + `bug report`) {
+    
+await message.channel.send("Provide a name for the bug.");
+const MSG1 = await message.channel.awaitMessages(msg => {
+if (msg.author.bot) return;
+return msg.content.includes("");
+}, {max: 1})
+.then(collected => {Bugname = collected.map(msg => msg.content).join(", ")});
+
+await message.channel.send("Describe this bug to us.");
+const MSG2 = await message.channel.awaitMessages(msg => {
+if (msg.author.bot) return;
+return msg.content.includes("");
+}, {max: 1})
+.then(collected => {des = collected.map(msg => msg.content).join(", ")});
+  
+await message.channel.send("Provide video/photo link to photo.");
+const MSG3 = await message.channel.awaitMessages(msg => {
+if (msg.author.bot) return;
+return msg.content.includes("http");
+}, {max: 1})
+.then(collected => {file = collected.map(msg => msg.content).join(", ")});
+  
+embed.setAuthor(`${Bugname}`,message.guild.iconURL)
+embed.setDescription(`**Bug Description :**\n${des}\n\n**Video/Photo proof :**\n${file}`)
+embed.setColor(`#FF0000`)
+embed.setFooter(`Bug report made by ${message.author.username} | ${message.author.id}`)
+bot.channels.get(`455411435435065384`).send({embed}).then(r => r.react(emoji))
+}
+
+})
+
+bot.on(`message`, async message => {  
+    let args = message.content.split(" ").slice(1);    
+    var embed = new Discord.RichEmbed()
+    var user = message.mentions.users.first()
+    
+    if(message.content.toLowerCase().startsWith(prefix + `mute`)) {
+    if(!message.member.hasPermission(`MANAGE_MESSAGES`)) {
+        embed.setAuthor(`Please don't use staff commands.`, message.author.displayAvatarURL)
+        embed.setColor(`#85C1E9`)
+    message.channel.send({embed})
+    }    
+    if(message.member.hasPermission(`MANAGE_MESSAGES`)) {
+      message.delete()
+    if(!user) { 
+    embed.setAuthor("Please tag a user.",message.author.displayAvatarURL)
+    embed.setColor(`#85C1E9`)
+    message.channel.send({embed});
+    }
+
+    let mutetime = args[1];
+    if(!mutetime) {
+      embed.setAuthor("You didn't specify a time!",message.author.displayAvatarURL);
+      message.channel.send({embed})
+    }
+
+    message.guild.member(user).addRole(`297180821016805376`)
+    embed.setAuthor(`You have been muted!`,user.displayAvatarURL)
+    embed.setColor(`#85C1E9`)
+    embed.setDescription(`You will be muted for ${ms(ms(mutetime))}`)
+    message.channel.send({embed});
+    
+
+
+    embed.setAuthor(`Mute`,user.displayAvatarURL)
+    embed.setColor(`#85C1E9`)
+    embed.setDescription(`**User :** ${user.username}\n**User ID :** ${user.id}\n**Time/Reason :** ${args}`)
+    bot.channels.get(`332634302388895764`).send({embed})
+
+    setTimeout(function(){
+        message.guild.member(user).removeRole(`297180821016805376`)
+      message.channel.send(`<@${user.id}> has been unmuted!`);
+    }, ms(mutetime));
+}}
+
+
+if(message.content.toLowerCase().startsWith(prefix + `unmute`)) {
+
+    if(!message.member.hasPermission(`MANAGE_MESSAGES`)) {
+        embed.setAuthor(`Nice try. :D`, message.author.displayAvatarURL)
+        embed.setColor(`#85C1E9`)
+    message.channel.send({embed})
+    }    
+    if(message.member.hasPermission(`MANAGE_MESSAGES`)) {        
+    message.guild.member(user).removeRole(`297180821016805376`)
+    message.channel.send(`<@${user.id}> has been unmuted!`)
+    }
+}
+})
+
+bot.on(`guildMemberAdd`,member=>{
+var embed = new Discord.RichEmbed();
+embed.setAuthor(`User joined`,member.displayAvatarURl)
+embed.setColor(0x36393e)
+embed.addField(`Username   :inbox_tray:`,`${member.user.username}`)
+embed.addField(`ID`,`${member.id}`)
+bot.channels.get(`332634302388895764`).send({embed})
+});
+
+bot.on(`guildMemberRemove`,member=>{
+var embed = new Discord.RichEmbed();
+embed.setAuthor(`User left`,member.displayAvatarURl)
+embed.setColor(0x36393e)
+embed.addField(`Username   :outbox_tray:`,`${member.user.username}`)
+embed.addField(`ID`,`${member.id}`)
+bot.channels.get(`332634302388895764`).send({embed})
 });
 
 bot.login(process.env.BOT_TOKEN)
