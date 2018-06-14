@@ -314,7 +314,7 @@ if(message.content.toLowerCase().startsWith(prefix + `unmute`)) {
 
 bot.on(`guildMemberAdd`,member=>{
 var embed = new Discord.RichEmbed();
-embed.setAuthor(`User joined`,member.user.displayAvatarURl)
+embed.setAuthor(`User joined`,member.user.displayAvatarURL)
 embed.setColor(0x36393e)
 embed.addField(`Username   :inbox_tray:`,`${member.user.username}#${member.user.discriminator}`)
 embed.addField(`ID`,`${member.id}`)
@@ -323,7 +323,7 @@ bot.channels.get(`332634302388895764`).send({embed})
 
 bot.on(`guildMemberRemove`,member=>{
 var embed = new Discord.RichEmbed();
-embed.setAuthor(`User left`,member.user.displayAvatarURl)
+embed.setAuthor(`User left`,member.user.displayAvatarURL)
 embed.setColor(0x36393e)
 embed.addField(`Username   :outbox_tray:`,`${member.user.username}#${member.user.discriminator}`)
 embed.addField(`ID`,`${member.id}`)
