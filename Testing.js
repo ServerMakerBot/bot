@@ -204,8 +204,8 @@ bot.on('message', async message => {
           }
         }
     if(message.author.bot) return;
-    if(!message.content.toLowerCase() === prefix + `bug report`) {
     if(message.content.toLowerCase().includes('bug') || message.content.toLowerCase().includes('problem')|| message.content.toLowerCase().includes('issue')) {
+    if(!message.content.toLowerCase() === prefix + `bug report`) {
     if(message.channel.id === `286013484670517259`) {
     embed.setAuthor(`Playmc Automatic Bug Report`,message.guild.iconURL)
     embed.setDescription(`**Google Forms Bug Report :**\n[Click this blue text.](https://goo.gl/forms/fAgKFt507istLwq82)\n\n**Emailing Support :** \nMake sure to give a well written explaination of your issue/bug.\n**Email :** __support@mcpeservermaker.com__`)
