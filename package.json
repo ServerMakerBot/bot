@@ -63,7 +63,9 @@
 
     "simple-youtube-api": "^5.0.1",
 
-    "ytdl-core": "^0.20.1"
+    "ytdl-core": "^0.20.1",
+    
+    "ms": "^2.1.1"
     
     
     
