@@ -1,7 +1,7 @@
 exports.TOKEN = process.env.BOT_TOKEN
 
 
-exports.PREFIX = '-';
+exports.PREFIX = '/';
 
 
 
