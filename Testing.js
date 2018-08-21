@@ -12,6 +12,12 @@ bot.on('message', message => {
 		if(!message.member.roles.has(`347734441801547776`)) {
 	message.member.addRole(`347734441801547776`)
 	}}
+	if(message.content.toLowerCase() === prefix + `free credits`){
+embed.setAuthor(`Free Credits`,message.author.displayAvatarURL)
+embed.setColor(`#85C1E9`)
+embed.setDescription(`**Do tasks this will earn you tons of credits at once.**\n**Watch advertisements for 1-5 credits.**\n**Join giveaways here for 10 credits a day**[*Join here for giveaways*](https://discord.gg/ZzhXzzd)`)
+message.channel.send({embed})
+}
 	if(message.content.toLowerCase() === prefix + 'mydevice android') {
 		message.member.addRole(`297193194439966720`)
 		embed.setAuthor(`You added Android role to yourself.`, message.author.displayAvatarURL)
