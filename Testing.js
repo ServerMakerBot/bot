@@ -9,7 +9,7 @@ bot.on('message', message => {
 	var embed = new Discord.RichEmbed();
 	if(message.author.bot) return
 	if(Math.round(Date.now() - message.guild.member(message.author).joinedAt) > 31536000000) {
-		if(!message.guild.member.has(`347734441801547776`)) {
+		if(!message.guild.member(message.author).has(`347734441801547776`)) {
 	message.member.addRole(`347734441801547776`)
 	}}
 	if(message.content.toLowerCase() === prefix + 'mydevice android') {
