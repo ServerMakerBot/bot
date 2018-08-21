@@ -15,7 +15,7 @@ bot.on('message', message => {
 	if(message.content.toLowerCase() === prefix + `free credits`){
 embed.setAuthor(`Free Credits`,message.author.displayAvatarURL)
 embed.setColor(`#85C1E9`)
-embed.setDescription(`**Do tasks this will earn you tons of credits at once.**\n**Watch advertisements for 1-5 credits.**\n**Join giveaways here for 10 credits a day**[*Join here for giveaways*](https://discord.gg/ZzhXzzd)`)
+embed.setDescription(`**Do tasks this will earn you tons of credits at once.**\n**Watch advertisements for 1-5 credits.**\n**Join giveaways here for 10 credits a day** [Join here for giveaways](https://discord.gg/ZzhXzzd)`)
 message.channel.send({embed})
 }
 	if(message.content.toLowerCase() === prefix + 'mydevice android') {
