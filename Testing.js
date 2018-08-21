@@ -8,7 +8,7 @@ var prefix = config.prefix1
 bot.on('message', message => {
 	var embed = new Discord.RichEmbed();
 	if(message.author.bot) return
-	if(Date.now() - message.guild.member(message.author).joinedAt === 31536000000) {
+	if(Date.now() - message.guild.member(message.author).joinedAt => 31536000000) {
 	message.member.addRole(`347734441801547776`)
 	}
 	if(message.content.toLowerCase() === prefix + 'mydevice android') {
